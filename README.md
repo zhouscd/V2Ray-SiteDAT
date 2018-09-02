@@ -1,4 +1,4 @@
-# v2ray-SiteDAT
+# V2Ray-SiteDAT
 
 用于 Project V 的自定义域名文件。
 
