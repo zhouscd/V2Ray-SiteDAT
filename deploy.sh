@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git remote add upstream "https://${geo_token}@github.com/ToutyRater/v2ray-SiteDAT.git"
+git remote add upstream "https://${geo_token}@github.com/ToutyRater/V2Ray-SiteDAT.git"
 
 mkdir -p h2y
 cd h2y
@@ -22,5 +22,5 @@ chmod +x ./v2sitedat
 
 #git checkout -b master
 git add -A
-git commit -m 'update'
+git commit -m 'Update'
 git push -u upstream HEAD:master 
