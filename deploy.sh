@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git remote add upstream "https://${geo_token}@github.com/ToutyRater/geotest.git"
+git remote add upstream "https://${geo_token}@github.com/ToutyRater/v2ray-SiteDAT.git"
 
 mkdir -p h2y
 cd h2y
