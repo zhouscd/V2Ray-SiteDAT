@@ -24,7 +24,7 @@ cd ..
 mkdir -p geofiles
 ls -al
 chmod +x ./v2sitedat
-./v2sitedat -dat ./geofiles/h2ysite.dat -dir ./h2y
+./v2sitedat -dat ./geofiles/h2y.dat -dir ./h2y
 
 
 #git checkout -b master
