@@ -21,6 +21,7 @@ cat gfw.list > gfw
 rm -rf *.list
 
 cd ..
+cp private ./sites/
 mkdir -p geofiles
 chmod +x ./v2sitedat
 ./v2sitedat -dat ./geofiles/geosite.dat -dir ./sites
