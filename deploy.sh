@@ -22,7 +22,6 @@ rm -rf *.list
 
 cd ..
 mkdir -p geofiles
-ls -al
 chmod +x ./v2sitedat
 ./v2sitedat -dat ./geofiles/geosite.dat -dir ./sites
 
