@@ -7,11 +7,11 @@ cd sites
 rm -rf ./*
 
 wget https://raw.githubusercontent.com/h2y/Shadowrocket-ADBlock-Rules/master/sr_top500_banlist_ad.conf
-cat sr_top500_banlist_ad.conf | grep Reject|grep DOMAIN-SUFFIX|awk -F, '{print $2}' > ad_domain
-cat sr_top500_banlist_ad.conf | grep Reject|grep IP-CIDR|awk -F, '{print $2}' > ad_ip
+cat sr_top500_banlist_ad.conf | grep Reject|grep DOMAIN-SUFFIX|awk -F, '{print $2}' > addomain
+cat sr_top500_banlist_ad.conf | grep Reject|grep IP-CIDR|awk -F, '{print $2}' > adip
 
-cat sr_top500_banlist_ad.conf | grep Proxy |grep DOMAIN-SUFFIX|awk -F, '{print $2}' > gfw_domain
-cat sr_top500_banlist_ad.conf | grep Proxy |grep IP-CIDR|awk -F, '{print $2}' > gfw_ip
+cat sr_top500_banlist_ad.conf | grep Proxy |grep DOMAIN-SUFFIX|awk -F, '{print $2}' > gfwdomain
+cat sr_top500_banlist_ad.conf | grep Proxy |grep IP-CIDR|awk -F, '{print $2}' > gfwip
 rm -rf sr_top500_banlist_ad.conf
 
 
