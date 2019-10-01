@@ -6,19 +6,15 @@ mkdir -p sites
 cd sites
 rm -rf ./*
 
-wget https://raw.githubusercontent.com/h2y/Shadowrocket-ADBlock-Rules/master/sr_direct_banad.conf
-cat sr_direct_banad.conf | grep Reject|grep DOMAIN-SUFFIX|awk -F, '{print $2}' > ad
-cat sr_direct_banad.conf | grep Reject|grep CIDR|awk -F, '{print $2}' >> ad
-rm -rf ./sr_direct_banad.conf
-#ls -al
+wget https://raw.githubusercontent.com/h2y/Shadowrocket-ADBlock-Rules/master/sr_top500_banlist_ad.conf
+cat sr_top500_banlist_ad.conf | grep Reject|grep DOMAIN-SUFFIX|awk -F, '{print $2}' > ad_domain
+cat sr_top500_banlist_ad.conf | grep Reject|grep IP-CIDR|awk -F, '{print $2}' > ad_ip
 
-#wget https://raw.githubusercontent.com/h2y/Shadowrocket-ADBlock-Rules/master/factory/resultant/ad.list
-#cat ad.list > ad
+cat sr_top500_banlist_ad.conf | grep Proxy |grep DOMAIN-SUFFIX|awk -F, '{print $2}' > gfw_domain
+cat sr_top500_banlist_ad.conf | grep Proxy |grep IP-CIDR|awk -F, '{print $2}' > gfw_ip
+rm -rf sr_top500_banlist_ad.conf
 
-wget https://raw.githubusercontent.com/h2y/Shadowrocket-ADBlock-Rules/master/factory/resultant/gfw.list
-cat gfw.list > gfw
 
-rm -rf *.list
 
 cd ..
 cp private ./sites/
