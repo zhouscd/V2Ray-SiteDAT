@@ -16,7 +16,8 @@ cat ../sr_top500_whitelist_ad.conf | grep Direct |grep DOMAIN-SUFFIX|awk -F, '{p
 
 cd ..
 
-
+rm sr_top500_banlist_ad.conf
+rm sr_top500_whitelist_ad.conf
 
 mkdir -p geofiles
 chmod +x ./v2sitedat
