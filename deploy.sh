@@ -13,7 +13,7 @@ cat ../sr_top500_banlist_ad.conf | grep Reject|grep DOMAIN-SUFFIX|awk -F, '{prin
 cat ../sr_top500_banlist_ad.conf | grep Proxy |grep DOMAIN-SUFFIX|awk -F, '{print $2}' > gfw
 
 cat ../sr_top500_whitelist_ad.conf | grep Direct |grep DOMAIN-SUFFIX|awk -F, '{print $2}' > cn
-
+sed -i '/github/d'  cn
 cd ..
 
 rm sr_top500_banlist_ad.conf
