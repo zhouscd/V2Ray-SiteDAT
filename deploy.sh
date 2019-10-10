@@ -21,7 +21,7 @@ rm sr_top500_whitelist_ad.conf
 
 mkdir -p geofiles
 chmod +x ./v2sitedat
-./v2sitedat -dat ./geofiles/geosite.dat -dir ./sites
+./v2sitedat -dat ./geofiles/data.dat -dir ./sites
 
 
 #git checkout -b master
